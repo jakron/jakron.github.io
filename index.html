@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SOARE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link type="text/css" href="AAAcss/css.css" rel="stylesheet">
+</head>
+
+
+<body>
+   
+    <div id="info"><a href="NELU.html" target="_blank" rel="noopener">NELU</a> <h1>Daca nai stiut astai Soare</h1></div>
+    <div id="container"></div>
+
+
+    <script type="text/javascript" src="js/three.min.js"></script>
+    <script type="text/javascript" src="js/three.module.js"></script>
+    <script type="text/javascript" src="js/ConvexGeometry.js"></script>
+    <script type="text/javascript" src="js/DecalGeometry.js"></script>
+    <script type="text/javascript" src="js/hilbert2D.js"></script>
+    <script type="text/javascript" src="js/hilbert3D.js"></script>
+    <script type="text/javascript" src="js/TeapotBufferGeometry.js"></script>
+    <script type="text/javascript" src="js/Detector.js"></script>
+    <script type="text/javascript" src="js/stats.min.js"></script>
+    <script type="text/javascript" src="js/3MFLoader.js"></script>
+    <script type="text/javascript" src="js/AdaptiveToneMappingPass.js"></script>
+    <script type="text/javascript" src="js/AMFLoader.js"></script>
+    <script type="text/javascript" src="js/ammo.js"></script>
+    <script type="text/javascript" src="js/AnaglyphEffect.js"></script>
+    <script type="text/javascript" src="js/AnimationClipCreator.js"></script>
+    <script type="text/javascript" src="js/AsciiEffect.js"></script>
+    <script type="text/javascript" src="js/AssimpJSONLoader.js"></script>
+    <script type="text/javascript" src="js/AssimpLoader.js"></script>
+    <script type="text/javascript" src="js/AttributeNode.js"></script>
+    <script type="text/javascript" src="js/AWDLoader.js"></script>
+    <script type="text/javascript" src="js/BabylonLoader.js"></script>
+    <script type="text/javascript" src="js/BasicShader.js"></script>
+    <script type="text/javascript" src="js/BinaryLoader.js"></script>
+    <script type="text/javascript" src="js/BleachBypassShader.js"></script>
+    <script type="text/javascript" src="js/BlendShader.js"></script>
+    <script type="text/javascript" src="js/BloomPass.js"></script>
+    <script type="text/javascript" src="js/BlurNode.js"></script>
+    <script type="text/javascript" src="js/BokehPass.js"></script>
+    <script type="text/javascript" src="js/BokehShader.js"></script>
+    <script type="text/javascript" src="js/BokehShader2.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/BrightnessContrastShader.js"></script>
+    <script type="text/javascript" src="js/BufferGeometryUtils.js"></script>
+    <script type="text/javascript" src="js/BufferSubdivisionModifier.js"></script>
+    <script type="text/javascript" src="js/BumpNode.js"></script>
+    <script type="text/javascript" src="js/BVHLoader.js"></script>
+    <script type="text/javascript" src="js/CameraNode.js"></script>
+    <script type="text/javascript" src="js/CanvasRenderer.js"></script>
+    <script type="text/javascript" src="js/Car.js"></script>
+    <script type="text/javascript" src="js/CCDIKSolver.js"></script>
+    <script type="text/javascript" src="js/CinematicCamera.js"></script>
+    <script type="text/javascript" src="js/ClearPass.js"></script>
+    <script type="text/javascript" src="js/Cloth.js"></script>
+    <script type="text/javascript" src="js/ColladaLoader.js"></script>
+    <script type="text/javascript" src="js/ColorAdjustmentNode.js"></script>
+    <script type="text/javascript" src="js/ColorConverter.js"></script>
+    <script type="text/javascript" src="js/ColorCorrectionShader.js"></script>
+    <script type="text/javascript" src="js/ColorifyShader.js"></script>
+    <script type="text/javascript" src="js/ColorNode.js"></script>
+    <script type="text/javascript" src="js/ColorsNode.js"></script>
+    <script type="text/javascript" src="js/ConstNode.js"></script>
+    <script type="text/javascript" src="js/ConvexGeometry.js"></script>
+    <script type="text/javascript" src="js/ConvexObjectBreaker.js"></script>
+    <script type="text/javascript" src="js/ConvolutionShader.js"></script>
+    <script type="text/javascript" src="js/CopyShader.js"></script>
+    <script type="text/javascript" src="js/CSS2DRenderer.js"></script>
+    <script type="text/javascript" src="js/CSS3DRenderer.js"></script>
+    <script type="text/javascript" src="js/ctm.js"></script>
+    <script type="text/javascript" src="js/CTMLoader.js"></script>
+    <script type="text/javascript" src="js/CTMWorker.js"></script>
+    <script type="text/javascript" src="js/CubeTextureNode.js"></script>
+    <script type="text/javascript" src="js/CubeTexturePass.js"></script>
+    <script type="text/javascript" src="js/CurveExtras.js"></script>
+    <script type="text/javascript" src="js/dat.gui.min.js"></script>
+    <script type="text/javascript" src="js/DaydreamController.js"></script>
+    <script type="text/javascript" src="js/DDSLoader.js"></script>
+    <script type="text/javascript" src="js/DecalGeometry.js"></script>
+    <script type="text/javascript" src="js/DepthLimitedBlurShader.js"></script>
+    <script type="text/javascript" src="js/Detector.js"></script>
+    <script type="text/javascript" src="js/DeviceOrientationControls.js"></script>
+    <script type="text/javascript" src="js/DigitalGlitch.js"></script>
+    <script type="text/javascript" src="js/DOFMipMapShader.js"></script>
+    <script type="text/javascript" src="js/DotScreenPass.js"></script>
+    <script type="text/javascript" src="js/DotScreenShader.js"></script>
+    <script type="text/javascript" src="js/draco_decoder.js"></script>
+    <script type="text/javascript" src="js/draco_wasm_wrapper.js"></script>
+    <script type="text/javascript" src="js/DRACOLoader.js"></script>
+    <script type="text/javascript" src="js/DragControls.js"></script>
+    <script type="text/javascript" src="js/earcut.js"></script>
+    <script type="text/javascript" src="js/EditorControls.js"></script>
+    <script type="text/javascript" src="js/EffectComposer.js"></script>
+    <script type="text/javascript" src="js/ExplodeModifier.js"></script>
+    <script type="text/javascript" src="js/FBXLoader.js"></script>
+    <script type="text/javascript" src="js/FilmPass.js"></script>
+    <script type="text/javascript" src="js/FilmShader.js"></script>
+    <script type="text/javascript" src="js/FirstPersonControls.js"></script>
+    <script type="text/javascript" src="js/FloatNode.js"></script>
+    <script type="text/javascript" src="js/FlyControls.js"></script>
+    <script type="text/javascript" src="js/FocusShader.js"></script>
+    <script type="text/javascript" src="js/FreiChenShader.js"></script>
+    <script type="text/javascript" src="js/FresnelShader.js"></script>
+    <script type="text/javascript" src="js/FunctionCallNode.js"></script>
+    <script type="text/javascript" src="js/FunctionNode.js"></script>
+    <script type="text/javascript" src="js/FXAAShader.js"></script>
+    <script type="text/javascript" src="js/GammaCorrectionShader.js"></script>
+    <script type="text/javascript" src="js/GearVRController.js"></script>
+    <script type="text/javascript" src="js/GeometryUtils.js"></script>
+    <script type="text/javascript" src="js/GlitchPass.js"></script>
+    <script type="text/javascript" src="js/GLNode.js"></script>
+    <script type="text/javascript" src="js/GLTFExporter.js"></script>
+    <script type="text/javascript" src="js/GLTFLoader.js"></script>
+    <script type="text/javascript" src="js/GPUComputationRenderer.js"></script>
+    <script type="text/javascript" src="js/GPUParticleSystem.js"></script>
+    <script type="text/javascript" src="js/gui.js"></script>
+    <script type="text/javascript" src="js/gunzip.min.js"></script>
+    <script type="text/javascript" src="js/Gyroscope.js"></script>
+    <script type="text/javascript" src="js/HDRCubeTextureLoader.js"></script>
+    <script type="text/javascript" src="js/hilbert2D.js"></script>
+    <script type="text/javascript" src="js/hilbert3D.js"></script>
+    <script type="text/javascript" src="js/HorizontalBlurShader.js"></script>
+    <script type="text/javascript" src="js/HorizontalTiltShiftShader.js"></script>
+    <script type="text/javascript" src="js/HueSaturationShader.js"></script>
+    <script type="text/javascript" src="js/ImageBitmapLoader.js"></script>
+    <script type="text/javascript" src="js/ImageUtils.js"></script>
+    <script type="text/javascript" src="js/ImprovedNoise.js"></script>
+    <script type="text/javascript" src="js/inflate.min.js"></script>
+    <script type="text/javascript" src="js/InputNode.js"></script>
+    <script type="text/javascript" src="js/IntNode.js"></script>
+    <script type="text/javascript" src="js/JoinNode.js"></script>
+    <script type="text/javascript" src="js/jszip.min.js"></script>
+    <script type="text/javascript" src="js/KaleidoShader.js"></script>
+    <script type="text/javascript" src="js/KMZLoader.js"></script>
+    <script type="text/javascript" src="js/LegacyGLTFLoader.js"></script>
+    <script type="text/javascript" src="js/LightNode.js"></script>
+    <script type="text/javascript" src="js/LoaderSupport.js"></script>
+    <script type="text/javascript" src="js/LuminanceNode.js"></script>
+    <script type="text/javascript" src="js/LuminosityHighPassShader.js"></script>
+    <script type="text/javascript" src="js/LuminosityShader.js"></script>
+    <script type="text/javascript" src="js/Lut.js"></script>
+    <script type="text/javascript" src="js/lzma.js"></script>
+    <script type="text/javascript" src="js/MarchingCubes.js"></script>
+    <script type="text/javascript" src="js/MaskPass.js"></script>
+    <script type="text/javascript" src="js/Math1Node.js"></script>
+    <script type="text/javascript" src="js/Math2Node.js"></script>
+    <script type="text/javascript" src="js/Math3Node.js"></script>
+    <script type="text/javascript" src="js/Matrix4Node.js"></script>
+    <script type="text/javascript" src="js/MD2Character.js"></script>
+    <script type="text/javascript" src="js/MD2CharacterComplex.js"></script>
+    <script type="text/javascript" src="js/MD2Loader.js"></script>
+    <script type="text/javascript" src="js/MirrorShader.js"></script>
+    <script type="text/javascript" src="js/MMDExporter.js"></script>
+    <script type="text/javascript" src="js/MMDLoader.js"></script>
+    <script type="text/javascript" src="js/mmdparser.min.js"></script>
+    <script type="text/javascript" src="js/MMDPhysics.js"></script>
+    <script type="text/javascript" src="js/MorphAnimMesh.js"></script>
+    <script type="text/javascript" src="js/MorphBlendMesh.js"></script>
+    <script type="text/javascript" src="js/msgpack-js.js"></script>
+    <script type="text/javascript" src="js/MTLLoader.js"></script>
+    <script type="text/javascript" src="js/NodeBuilder.js"></script>
+    <script type="text/javascript" src="js/NodeLib.js"></script>
+    <script type="text/javascript" src="js/NodeMaterial.js"></script>
+    <script type="text/javascript" src="js/NodePass.js"></script>
+    <script type="text/javascript" src="js/NoiseNode.js"></script>
+    <script type="text/javascript" src="js/NormalMapNode.js"></script>
+    <script type="text/javascript" src="js/NormalMapShader.js"></script>
+    <script type="text/javascript" src="js/NormalNode.js"></script>
+    <script type="text/javascript" src="js/NRRDLoader.js"></script>
+    <script type="text/javascript" src="js/NURBSCurve.js"></script>
+    <script type="text/javascript" src="js/NURBSSurface.js"></script>
+    <script type="text/javascript" src="js/NURBSUtils.js"></script>
+    <script type="text/javascript" src="js/o3dgc.js"></script>
+    <script type="text/javascript" src="js/OBJExporter.js"></script>
+    <script type="text/javascript" src="js/OBJLoader.js"></script>
+    <script type="text/javascript" src="js/OBJLoader2.js"></script>
+    <script type="text/javascript" src="js/Ocean.js"></script>
+    <script type="text/javascript" src="js/OceanShaders.js"></script>
+    <script type="text/javascript" src="js/Octree.js"></script>
+    <script type="text/javascript" src="js/opentype.min.js"></script>
+    <script type="text/javascript" src="js/OperatorNode.js"></script>
+    <script type="text/javascript" src="js/OrbitControls.js"></script>
+    <script type="text/javascript" src="js/OrthographicTrackballControls.js"></script>
+    <script type="text/javascript" src="js/OutlineEffect.js"></script>
+    <script type="text/javascript" src="js/OutlinePass.js"></script>
+    <script type="text/javascript" src="js/PaintViveController.js"></script>
+    <script type="text/javascript" src="js/ParallaxBarrierEffect.js"></script>
+    <script type="text/javascript" src="js/ParallaxShader.js"></script>
+    <script type="text/javascript" src="js/ParametricGeometries.js"></script>
+    <script type="text/javascript" src="js/PCDLoader.js"></script>
+    <script type="text/javascript" src="js/PDBLoader.js"></script>
+    <script type="text/javascript" src="js/PeppersGhostEffect.js"></script>
+    <script type="text/javascript" src="js/PhongNode.js"></script>
+    <script type="text/javascript" src="js/PhongNodeMaterial.js"></script>
+    <script type="text/javascript" src="js/PlayCanvasLoader.js"></script>
+    <script type="text/javascript" src="js/PLYLoader.js"></script>
+    <script type="text/javascript" src="js/PMREMCubeUVPacker.js"></script>
+    <script type="text/javascript" src="js/PMREMGenerator.js"></script>
+    <script type="text/javascript" src="js/pnltri.min.js"></script>
+    <script type="text/javascript" src="js/PointerLockControls.js"></script>
+    <script type="text/javascript" src="js/PositionNode.js"></script>
+    <script type="text/javascript" src="js/PRNG.js"></script>
+    <script type="text/javascript" src="js/Projector.js"></script>
+    <script type="text/javascript" src="js/PRWMLoader.js"></script>
+    <script type="text/javascript" src="js/PVRLoader.js"></script>
+    <script type="text/javascript" src="js/QuickHull.js"></script>
+    <script type="text/javascript" src="js/RawNode.js"></script>
+    <script type="text/javascript" src="js/RaytracingRenderer.js"></script>
+    <script type="text/javascript" src="js/RaytracingWorker.js"></script>
+    <script type="text/javascript" src="js/RectAreaLightUniformsLib.js"></script>
+    <script type="text/javascript" src="js/ReflectNode.js"></script>
+    <script type="text/javascript" src="js/Reflector.js"></script>
+    <script type="text/javascript" src="js/ReflectorNode.js"></script>
+    <script type="text/javascript" src="js/ReflectorRTT.js"></script>
+    <script type="text/javascript" src="js/Refractor.js"></script>
+    <script type="text/javascript" src="js/RenderPass.js"></script>
+    <script type="text/javascript" src="js/ResolutionNode.js"></script>
+    <script type="text/javascript" src="js/RGBELoader.js"></script>
+    <script type="text/javascript" src="js/RGBShiftShader.js"></script>
+    <script type="text/javascript" src="js/RollerCoaster.js"></script>
+    <script type="text/javascript" src="js/RoughnessToBlinnExponentNode.js"></script>
+    <script type="text/javascript" src="js/SAOPass.js"></script>
+    <script type="text/javascript" src="js/SAOShader.js"></script>
+    <script type="text/javascript" src="js/SavePass.js"></script>
+    <script type="text/javascript" src="js/scenes.js"></script>
+    <script type="text/javascript" src="js/ScreenNode.js"></script>
+    <script type="text/javascript" src="js/ScreenUVNode.js"></script>
+    <script type="text/javascript" src="js/SEA3D.js"></script>
+    <script type="text/javascript" src="js/SEA3DDeflate.js"></script>
+    <script type="text/javascript" src="js/SEA3DLegacy.js"></script>
+    <script type="text/javascript" src="js/SEA3DLoader.js"></script>
+    <script type="text/javascript" src="js/SEA3DLZMA.js"></script>
+    <script type="text/javascript" src="js/SepiaShader.js"></script>
+    <script type="text/javascript" src="js/ShaderGodRays.js"></script>
+    <script type="text/javascript" src="js/ShaderPass.js"></script>
+    <script type="text/javascript" src="js/ShaderSkin.js"></script>
+    <script type="text/javascript" src="js/ShaderTerrain.js"></script>
+    <script type="text/javascript" src="js/ShaderToon.js"></script>
+    <script type="text/javascript" src="js/ShadowMapViewer.js"></script>
+    <script type="text/javascript" src="js/ShadowMesh.js"></script>
+    <script type="text/javascript" src="js/SimplexNoise.js"></script>
+    <script type="text/javascript" src="js/SimplifyModifier.js"></script>
+    <script type="text/javascript" src="js/Sky.js"></script>
+    <script type="text/javascript" src="js/SMAAPass.js"></script>
+    <script type="text/javascript" src="js/SMAAShader.js"></script>
+    <script type="text/javascript" src="js/SobelOperatorShader.js"></script>
+    <script type="text/javascript" src="js/SoftwareRenderer.js"></script>
+    <script type="text/javascript" src="js/SpriteNode.js"></script>
+    <script type="text/javascript" src="js/SpriteNodeMaterial.js"></script>
+    <script type="text/javascript" src="js/SSAARenderPass.js"></script>
+    <script type="text/javascript" src="js/SSAOPass.js"></script>
+    <script type="text/javascript" src="js/SSAOShader.js"></script>
+    <script type="text/javascript" src="js/StandardNode.js"></script>
+    <script type="text/javascript" src="js/StandardNodeMaterial.js"></script>
+    <script type="text/javascript" src="js/stats.min.js"></script>
+    <script type="text/javascript" src="js/StereoEffect.js"></script>
+    <script type="text/javascript" src="js/STLBinaryExporter.js"></script>
+    <script type="text/javascript" src="js/STLExporter.js"></script>
+    <script type="text/javascript" src="js/STLLoader.js"></script>
+    <script type="text/javascript" src="js/SubdivisionModifier.js"></script>
+    <script type="text/javascript" src="js/SVGLoader.js"></script>
+    <script type="text/javascript" src="js/SVGRenderer.js"></script>
+    <script type="text/javascript" src="js/SwitchNode.js"></script>
+    <script type="text/javascript" src="js/system.min.js"></script>
+    <script type="text/javascript" src="js/TAARenderPass.js"></script>
+    <script type="text/javascript" src="js/TDSLoader.js"></script>
+    <script type="text/javascript" src="js/TeapotBufferGeometry.js"></script>
+    <script type="text/javascript" src="js/TechnicolorShader.js"></script>
+    <script type="text/javascript" src="js/TempNode.js"></script>
+    <script type="text/javascript" src="js/TessellateModifier.js"></script>
+    <script type="text/javascript" src="js/TextureNode.js"></script>
+    <script type="text/javascript" src="js/TexturePass.js"></script>
+    <script type="text/javascript" src="js/TGALoader.js"></script>
+    <script type="text/javascript" src="js/three.js"></script>
+    <script type="text/javascript" src="js/timeliner_gui.min.js"></script>
+    <script type="text/javascript" src="js/TimelinerController.js"></script>
+    <script type="text/javascript" src="js/TimerNode.js"></script>
+    <script type="text/javascript" src="js/ToneMapShader.js"></script>
+    <script type="text/javascript" src="js/TrackballControls.js"></script>
+    <script type="text/javascript" src="js/TransformControls.js"></script>
+    <script type="text/javascript" src="js/transition.js"></script>
+    <script type="text/javascript" src="js/TriangleBlurShader.js"></script>
+    <script type="text/javascript" src="js/TTFLoader.js"></script>
+    <script type="text/javascript" src="js/tween.min.js"></script>
+    <script type="text/javascript" src="js/TypedArrayUtils.js"></script>
+    <script type="text/javascript" src="js/TypedGeometryExporter.js"></script>
+    <script type="text/javascript" src="js/UCSCharacter.js"></script>
+    <script type="text/javascript" src="js/UnpackDepthRGBAShader.js"></script>
+    <script type="text/javascript" src="js/UnrealBloomPass.js"></script>
+    <script type="text/javascript" src="js/UTF8Loader.js"></script>
+    <script type="text/javascript" src="js/UVNode.js"></script>
+    <script type="text/javascript" src="js/UVsDebug.js"></script>
+    <script type="text/javascript" src="js/UVTransformNode.js"></script>
+    <script type="text/javascript" src="js/VarNode.js"></script>
+    <script type="text/javascript" src="js/Vector2Node.js"></script>
+    <script type="text/javascript" src="js/Vector3Node.js"></script>
+    <script type="text/javascript" src="js/Vector4Node.js"></script>
+    <script type="text/javascript" src="js/VelocityNode.js"></script>
+    <script type="text/javascript" src="js/VerticalBlurShader.js"></script>
+    <script type="text/javascript" src="js/VerticalTiltShiftShader.js"></script>
+    <script type="text/javascript" src="js/VignetteShader.js"></script>
+    <script type="text/javascript" src="js/ViveController.js"></script>
+    <script type="text/javascript" src="js/Volume.js"></script>
+    <script type="text/javascript" src="js/VolumeSlice.js"></script>
+    <script type="text/javascript" src="js/VRControls.js"></script>
+    <script type="text/javascript" src="js/VREffect.js"></script>
+    <script type="text/javascript" src="js/VRMLLoader.js"></script>
+    <script type="text/javascript" src="js/VTKLoader.js"></script>
+    <script type="text/javascript" src="js/Water.js"></script>
+    <script type="text/javascript" src="js/Water2.js"></script>
+    <script type="text/javascript" src="js/WaterRefractionShader.js"></script>
+    <script type="text/javascript" src="js/WebGLDeferredRenderer.js"></script>
+    <script type="text/javascript" src="js/WebVR.js"></script>
+    <script type="text/javascript" src="js/XLoader.js"></script>
+
+
+
+
+    <script>
+        if (!Detector.webgl) Detector.addGetWebGLMessage();
+        var SCREEN_WIDTH = window.innerWidth,
+            SCREEN_HEIGHT = window.innerHeight,
+            r = 450,
+            mouseX = 0,
+            mouseY = 0,
+            windowHalfX = window.innerWidth / 2,
+            windowHalfY = window.innerHeight / 2,
+            camera, scene, renderer;
+        init();
+        animate();
+
+        function init() {
+            var container;
+            container = document.createElement('div');
+            document.body.appendChild(container);
+            camera = new THREE.PerspectiveCamera(80, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 3000);
+            camera.position.z = 1000;
+            scene = new THREE.Scene();
+            var i, line, vertex1, vertex2, material, p,
+                parameters = [
+                    [0.04, 0xf3d08a, 1, 1],
+                    [0.04, 0xf3d08a, 1, 1],
+                    [0.04, 0xf3d08a, 1, 1],
+                    [0.04, 0xf3d08a, 1, 1],
+                    [0.20, 0xf0b747, 1, 1],
+                    [0.25, 0xf0b747, 1, 1],
+                    [0.25, 0xf0b747, 1, 1],
+                    [0.30, 0xf0b747, 1, 1],
+                    [0.35, 0xf0b747, 1, 1],
+                    [0.5, 0xf0b747, 1, 1],
+                    [0.6, 0xf0b747, 1, 1],
+                    [0.75, 0xff9900, 0.75, 1],
+                    [1, 0xc81717, 0.5, 1],
+                    [1, 0xc81717, 0.5, 1],
+                    [1.25, 0x000833, 0.8, 1],
+                    [3.0, 0xaaaaaa, 0.75, 2],
+                    [3.5, 0xffffff, 0.5, 1],
+                    [4.5, 0xffffff, 0.25, 1],
+                    [5.5, 0xffffff, 0.125, 1]
+                ];
+            var geometry = createGeometry();
+            for (i = 0; i < parameters.length; ++i) {
+                p = parameters[i];
+                material = new THREE.LineBasicMaterial({
+                    color: p[1],
+                    opacity: p[2],
+                    linewidth: p[3]
+                });
+                line = new THREE.LineSegments(geometry, material);
+                line.scale.x = line.scale.y = line.scale.z = p[0];
+                line.originalScale = p[0];
+                line.rotation.y = Math.random() * Math.PI;
+                line.updateMatrix();
+                scene.add(line);
+            }
+            renderer = new THREE.WebGLRenderer({
+                antialias: true
+            });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+            container.appendChild(renderer.domElement);
+            document.addEventListener('mousemove', onDocumentMouseMove, true);
+            document.addEventListener('touchstart', onDocumentTouchStart, true);
+            document.addEventListener('touchmove', onDocumentTouchMove, true);
+            //
+            window.addEventListener('resize', onWindowResize, false);
+            // test geometry swapability
+            setInterval(function() {
+                var geometry = createGeometry();
+                scene.traverse(function(object) {
+                    if (object instanceof THREE.Line) {
+                        object.geometry.dispose();
+                        object.geometry = geometry;
+                    }
+                });
+            }, 1000);
+        }
+
+        function createGeometry() {
+            var geometry = new THREE.Geometry();
+            for (var i = 0; i < 1500; i++) {
+                var vertex1 = new THREE.Vector3();
+                vertex1.x = Math.random() * 2 - 1;
+                vertex1.y = Math.random() * 2 - 1;
+                vertex1.z = Math.random() * 2 - 1;
+                vertex1.normalize();
+                vertex1.multiplyScalar(r);
+                var vertex2 = vertex1.clone();
+                vertex2.multiplyScalar(Math.random() * 0.09 + 1);
+                geometry.vertices.push(vertex1);
+                geometry.vertices.push(vertex2);
+            }
+            return geometry;
+        }
+
+        function onWindowResize() {
+            windowHalfX = window.innerWidth / 2;
+            windowHalfY = window.innerHeight / 2;
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function onDocumentMouseMove(event) {
+            mouseX = event.clientX - windowHalfX;
+            mouseY = event.clientY - windowHalfY;
+        }
+
+        function onDocumentTouchStart(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+                mouseX = event.touches[0].pageX - windowHalfX;
+                mouseY = event.touches[0].pageY - windowHalfY;
+            }
+        }
+
+        function onDocumentTouchMove(event) {
+            if (event.touches.length == 1) {
+                event.preventDefault();
+                mouseX = event.touches[0].pageX - windowHalfX;
+                mouseY = event.touches[0].pageY - windowHalfY;
+            }
+        }
+        //
+        function animate() {
+            requestAnimationFrame(animate);
+            render();
+        }
+
+        function render() {
+            camera.position.y += (-mouseY + 500 - camera.position.y) * .5;
+            camera.lookAt(scene.position);
+            renderer.render(scene, camera);
+            var time = Date.now() * 0.00018;
+            for (var i = 0; i < scene.children.length; i++) {
+                var object = scene.children[i];
+                if (object instanceof THREE.Line) {
+                    object.rotation.y = time * (i < 4 ? (i + 1) : -(i + 1));
+                    if (i < 5) object.scale.x = object.scale.y = object.scale.z = object.originalScale * (i / 5 + 1) * (1 + 0.95 * Math.sin(5 * time));
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
